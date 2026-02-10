@@ -1,10 +1,8 @@
 python do_print() {
     bb.plain("**************************")
-    bb.plain("Recipe name: %s" % d.getVar('PN'))
+    bb.plain("%s - %s" % (d.getVar('PN'), d.getVar('BB_CURRENTTASK')))
     bb.plain("**************************")
 }
 
-DEPENDS += "bsp devtools"
-do_print[deptask] = "do_print"
-
-addtask print before do_build
+DEPENDS += "core devtools"
+do_print[deptask] = "do_build"
