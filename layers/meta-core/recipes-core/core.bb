@@ -1,4 +1,4 @@
-python do_print() {
+python do_init() {
     bb.plain("**************************")
     bb.plain("%s - %s" % (d.getVar('PN'), d.getVar('BB_CURRENTTASK')))
     bb.plain("**************************")

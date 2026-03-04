@@ -1,4 +1,4 @@
-deltask print
+deltask init
 deltask fetch
 deltask unpack
 deltask patch
@@ -8,7 +8,7 @@ deltask install
 deltask package
 deltask build
 
-do_print(){
+do_init(){
 	:
 }
 
@@ -32,7 +32,7 @@ do_build(){
 	:
 }
 
-addtask print
-addtask fetch after do_print
+addtask init
+addtask fetch after do_init
 addtask unpack after do_fetch
 addtask build after do_unpack

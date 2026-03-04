@@ -1,4 +1,4 @@
-do_print(){
+do_init(){
 	:
 }
 
@@ -42,8 +42,8 @@ do_build(){
 	:
 }
 
-addtask print
-addtask fetch after do_print
+addtask init
+addtask fetch after do_init
 addtask unpack after do_fetch
 addtask patch after do_unpack
 addtask configure after do_patch
